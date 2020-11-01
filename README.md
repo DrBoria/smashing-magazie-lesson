@@ -2,6 +2,7 @@
 
 Are you tired of editing your landing page?
 Did you lost in dozens lines of html/css code?
+
 Meet basic EJS template.
 
 Component based approach with EJS, SCSS.
