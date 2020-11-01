@@ -1,0 +1,9 @@
+@import '../../../scss/variables.scss';
+
+footer {
+  box-sizing: border-box;
+  background-color: $colorSectionBG;
+  height: $footerHeight;
+  color: $colorSectionText;
+  padding: $sectionOffsetVertical $sectionOffsetHorizontal;
+}

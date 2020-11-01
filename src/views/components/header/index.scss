@@ -1,0 +1,9 @@
+@import '../../../scss/variables.scss';
+
+header {
+  box-sizing: border-box;
+  background-color: $colorSectionBG;
+  height: $headerHeight;
+  color: $colorSectionText;
+  padding: $sectionOffsetVertical $sectionOffsetHorizontal;
+}

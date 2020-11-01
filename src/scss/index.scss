@@ -1,13 +1,18 @@
 @charset "UTF-8";
-
-@font-face {
-font-family: 'MyFont';
-  src:  url('../../public/fonts/comic.woff2') format('woff2'),
-        url('../../public/fonts/comic.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
-}
+@import './variables.scss';
 
 body {
-    font-family: 'MyFont';
+    font-family: $fontFamily;
+    margin: 0;
 }
+
+main {
+  height: calc(100vh - #{$headerHeight} - #{$footerHeight});
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@import '../views/components/header/index.scss';
+@import '../views/components/footer/index.scss';
