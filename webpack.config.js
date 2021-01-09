@@ -6,12 +6,10 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const isDevelopment = process.env.NODE_ENV !== "production";
 
 const dirSrc = path.join(__dirname, "src");
-const dirBuild = path.join(__dirname, "Build");
+const dirBuild = path.join(__dirname, "build");
 const dirNode = path.join(__dirname, "node_modules");
-const entryPoint = path.join(__dirname, "src/js/index.js");
 
 module.exports = {
-  entry: [entryPoint],
   resolve: {
     modules: [dirNode, dirSrc, dirBuild]
   },
@@ -22,19 +20,28 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: "babel-loader",
-        options: {
-          compact: true
-        },
-        include: path.join(__dirname, "scr/javascript")
+        include: path.join(__dirname, "scr/js")
       },
       {
-        test: /\.(png|jpg|jpeg|svg|woff2?|ttf|otf|eot)$/,
+        test: /\.(png|jpg|jpeg|svg)$/,
         exclude: /node_modules/,
         use: [
           {
-            loader: "file-loader",
+            loader: 'file-loader',
             options: {
-              name: isDevelopment ? "[name].[ext]" : "[name].[contenthash].[ext]",
+              name: './public/imgs/[name].[ext]'
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(woff2?|ttf|otf|eot)$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: './public/fonts/[name].[ext]'
             }
           }
         ]
@@ -46,16 +53,12 @@ module.exports = {
           {
             loader: isDevelopment ? "style-loader" : MiniCssExtractPlugin.loader
           },
-          { loader: "css-loader", options: { sourceMap: isDevelopment } },
+          { loader: "css-loader" },
           {
             loader: "postcss-loader",
-            options: { sourceMap: isDevelopment, importLoaders: 1 }
           },
           {
             loader: "sass-loader",
-            options: {
-              sourceMap: isDevelopment
-            }
           }
         ],
         include: path.join(__dirname, "src/scss")
@@ -70,7 +73,9 @@ module.exports = {
       }
     ]
   },
-
+  optimization: {
+    runtimeChunk: true
+  },
   // For every new page add info here
   plugins: [
 
@@ -80,7 +85,7 @@ module.exports = {
     }),
     customHtmlWebpackPlugin({
       filename: "page2.html",
-      template: "./src/views/pages/page2.ejs",
+      template: "./src/views/page2.ejs",
     }),
 
     new MiniCssExtractPlugin({

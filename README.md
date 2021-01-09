@@ -2,7 +2,6 @@
 
 Are you tired of editing your landing page?
 Did you lost in dozens lines of html/css code?
-
 Meet basic EJS template.
 
 Component based approach with EJS, SCSS.
@@ -34,7 +33,7 @@ Example:
 ```
     customHtmlWebpackPlugin({
       filename: "page2.html",
-      template: "./src/views/pages/page2.ejs",
+      template: "./src/views/page2.ejs",
     }),
 ```
 
@@ -46,4 +45,17 @@ Example:
 ```
 
 Build in 'build' folder.
-By default all is minified. Css and js separately.
+By default all is minified. Css and js separately
+
+## IMG issue
+  In components images should be imported as it is imported inside page.
+  For header inside page2.ejs is should be imported as
+  ```
+    ../../public/imgs/index.jpg
+  ```
+
+  NOT
+
+  ```
+    ../../../../public/imgs/index.jpg
+  ```

@@ -1,14 +1,18 @@
+const path = require("path");
 const webpack = require("webpack");
 const merge = require("webpack-merge");
 const webpackConfig = require("./webpack.config");
+const entryPoint = path.join(__dirname, "src/js/index.js");
 
 
 module.exports = merge(webpackConfig, {
   devtool: "eval",
+  entry: [entryPoint],
 
   output: {
     pathinfo: true,
     publicPath: "/",
+    path: "/",
     filename: "bundle.js"
   },
 
@@ -26,5 +30,5 @@ module.exports = merge(webpackConfig, {
     hot: true,
   },
 
-  plugins: [new webpack.HotModuleReplacementPlugin()]
+  plugins: [new webpack.HotModuleReplacementPlugin(), new webpack.NoEmitOnErrorsPlugin()]
 });
