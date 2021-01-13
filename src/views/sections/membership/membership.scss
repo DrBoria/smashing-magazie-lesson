@@ -1,0 +1,34 @@
+.membership {
+    background: linear-gradient(to top, #13395f,  #272634,);
+    height: 640px;
+    position: relative;
+}
+.membership__text {
+    line-height: 45px;
+    padding-top: 60px;
+    margin-left: 20%;
+    width: 790px;
+    color: white;
+    font-size: 18pt;
+}
+.cx {
+    color: white;
+}
+.zel {
+    font-size: 17pt;
+    margin-top: 30px;
+    color: white;
+    font-weight: 700;
+    border-radius: 6px;
+    background: linear-gradient(to top, #41b14f, #9ae23c);
+    width: 350px;
+    height: 70px;
+    border: none;
+}
+.zel:hover {
+    background-color:#358b40;
+}
+.qwe {
+    position: absolute;
+    margin: -55px 0 0 1200px;
+}

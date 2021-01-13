@@ -1,18 +1,24 @@
 @charset "UTF-8";
-@import './variables.scss';
+
+@font-face {
+font-family: 'MyFont';
+  src:  url('../../public/fonts/comic.woff2') format('woff2'),
+        url('../../public/fonts/comic.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
 
 body {
-    font-family: $fontFamily;
+    font-family: 'MyFont';
     margin: 0;
 }
 
-main {
-  height: calc(100vh - #{$headerHeight} - #{$footerHeight});
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-@import '../views/components/header/index.scss';
-@import '../views/components/footer/index.scss';
+@import '../views/sections/adw/adw.scss';
+@import '../views/sections/community_links/community_links.scss';
+@import '../views/sections/footer/footer.scss';
+@import '../views/sections/guides/guides.scss';
+@import '../views/sections/header/header.scss';
+@import '../views/sections/latest_articles/latest_articles.scss';
+@import '../views/sections/latest_posts/latest_posts.scss';
+@import '../views/sections/membership/membership.scss';
+@import '../views/sections/table_of_content/table_of_content.scss';

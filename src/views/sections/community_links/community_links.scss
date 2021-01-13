@@ -1,0 +1,79 @@
+.community {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 55px 30px 0px;
+}
+.men_nedeli {
+    width: 100%;
+}
+.img_men {
+    float: left;
+}
+.zagal {
+    font-size: 17pt;
+    color: #666666;
+    margin-bottom: 35px;
+}
+.text {
+    font-size: 18pt;
+    color: #5f5f5f;
+}
+.community_block {
+    width: 48%;
+    padding-bottom: 40px;
+    padding-left: 25px;
+}
+.img_block {
+    float: left;
+    margin-bottom: 275px;
+    margin-top: 50px;
+    padding-right: 30px ;
+}
+.zgal_block {
+    font-size: 18pt;
+    font-weight: 700;
+    color: #666666;
+    margin-top: 45px;
+}
+.zgal_block a {
+    color: #666666;
+} 
+.zgal_block2 {
+    color: black;
+    font-size: 26pt;
+    font-weight: 900;
+    margin-bottom: 25px;
+    margin-top: -15px;
+}
+.zgal_block2 a {
+    text-decoration: none;
+    color: black;
+}
+.zgal_block2 a:hover {
+    color: red;
+}
+.zgal_block3 {
+    font-size: 15pt;
+}
+.zgal_block3 span {
+    color: #666666;
+    font-size: 15pt;
+    text-transform: uppercase;
+}
+.tw{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 90px;
+}
+.twitter{
+    text-decoration: none;
+    color: #000;
+}
+.twitter:hover{
+    color: brown;
+}
+.polosa{
+    border-bottom: 4px solid #f00;
+    width: 330px;
+}

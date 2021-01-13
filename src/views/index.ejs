@@ -1,20 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-  <%- include('./components/head.ejs', {
-    title: 'Webpack Starter App',
-    author: 'John Doe',
-    keywords: ['lorem', 'ipsum', 'dolor', 'sit', 'amet'],
-    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'
-  }) -%>
+<html lang="ru">
+  <link rel="icon" type="image/png" href="/public/imgs/favicon/favicon-32x32.png">
+  <title>Smashing Magazine - для веб-дизайнеров и разработчиков</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <body>
-    <%- include('./components/header/index.ejs') -%>
-    <main>
-      <h1>Basic app</h1>
-      <img height="200" width="300" src="../../public/imgs/index.jpg" alt="">
-      <div>
-        a basic app with comic font in scss
-      </div>
-    </main>
-    <%- include('./components/footer/index.ejs') -%>
+    <%- include('./sections/header/header.ejs') -%>
+    <%- include('./sections/latest_articles/latest_articles.ejs') -%>
+    <%- include('./sections/membership/membership.ejs') -%>
+    <%- include('./sections/latest_posts/latest_posts.ejs') -%>
+    <%- include('./sections/adw/adw.ejs') -%>
+    <%- include('./sections/community_links/community_links.ejs') -%>
+    <%- include('./sections/table_of_content/table_of_content.ejs') -%>
+    <%- include('./sections/guides/guides.ejs') -%>
+    <%- include('./sections/footer/footer.ejs') -%>
+    <script>
+       $(function() {
+       let header = $("#header");
+       let blocki = $("#blocki");
+       let blockiH = blocki.innerHeight();
+       let scrollpos = $(window).scrollTop();
+
+       $(window).on("scroll load resize", function() {
+        blockiH = blocki.innerHeight();
+        scrollpos = $(this).scrollTop();
+        if( scrollpos > blockiH ) {
+          header.addClass("fixed");
+        } else {
+          header.removeClass("fixed");
+        }
+       });
+
+       header.addClass("fixed");
+
+       let nav = $("#nav");
+       let navToggle = $("#navToggle");
+       navToggle.on("click", function(event){
+         event.preventDefault();
+         nav.toggleClass("show");
+       });
+    });
+    </script>
   </body>
 </html>

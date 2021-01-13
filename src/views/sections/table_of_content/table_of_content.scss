@@ -1,0 +1,45 @@
+.book{
+display: flex;
+flex-direction: column;
+padding: 40px 60px;
+background-color: #d33a2c;
+position: relative;
+}
+.book1{
+    font-size: 15pt;
+    color: white;
+    padding-bottom: 30px;
+}    
+.book2{
+    font-weight: 900;
+    font-size: 25pt;
+    color: white;
+    padding-bottom: 30px;
+}
+.book3{
+    font-size: 16pt;
+    color: white;
+    width: 60%;
+    padding-bottom: 30px;
+}
+.book__knopka{
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 17pt;
+    border: none;
+    font-size: 19pt;
+    font-weight: 700;
+    font-family: serif;
+    color: #1b71bb;
+}
+.book__knopka:hover{
+    color: red;
+}
+.red_book{
+    position: absolute;
+    z-index: 2;
+    height: 350px;
+    margin-left: 1400px;
+    margin-top: -90px;
+}

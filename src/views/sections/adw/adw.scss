@@ -1,0 +1,47 @@
+.fon {
+    padding: 30px 510px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    background: linear-gradient(to top, #4399d9, #1b71bb);
+    font-size: 16pt;
+    color: white;
+}
+.fon h1 {
+    font-size: 35pt;
+    font-weight: 900;
+}
+.photo {
+    margin-top: 50px;
+    display: block;
+    width: 100%;
+    max-width: 920px;
+}
+.ew {
+    margin: 0 auto;
+    width: 340px;
+    height: 66px;
+    border-radius: 10px;
+    color: #1b71bb;
+    border: none;
+    font-size: 19pt;
+    font-weight: 700;
+    font-family: serif;
+}
+.ew:hover {
+    color: red;
+    transition: .4s;
+}
+.tyu{
+    color: white;
+    text-decoration: none;
+}
+.edr {
+    text-decoration-color: #4399d9;
+}
+.fon p {
+    font-size: 20pt;
+    margin-bottom: 50px;
+}

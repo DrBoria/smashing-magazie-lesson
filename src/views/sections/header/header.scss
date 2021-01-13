@@ -1,0 +1,114 @@
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d33a2c;
+    height: 93px;
+    padding-bottom: 7px;
+}
+.header.fixed {
+    position: fixed;
+    z-index: 1001;
+    margin-top: -45px;
+    padding-bottom: -7px;
+    width: 100%;
+    height: 82px;
+}
+.navv {
+    display: flex;
+    position: relative;
+}
+.header ul {
+    padding: 0;
+    justify-content: space-between;
+    margin-top: 19px;
+    margin-left: 11px;
+}
+.header li {
+    list-style-type: none;
+    padding: 8px 15px 13px 15px;
+    color: #fff;
+    border-radius: 11px;
+    font-size: 17pt;
+    font-weight: 900;
+}
+.header li:hover {
+    background-color: #B43125;
+}
+.header .search {
+    position: relative;
+}
+.header .search input {
+    border: 1px black;
+    border-radius: 11px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    font-weight: 700;
+    box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3), 0 -6px 16px -6px rgba(0,0,0,.025);
+    padding-left: 57px;
+    margin-right: 42px;
+    font-family: serif;
+    font-size: 17pt;
+    width: 290px;
+}
+.header .search img {
+    position: absolute;
+    top: 17px;
+    left: 16px;
+}
+.img {
+    margin: 22px 0 0 50px;
+}
+.more {
+    border: 1px black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #A92E23;
+    border-radius: 11px;
+    box-shadow: 0 13px 27px -15px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3), 0 -6px 16px -6px rgba(0,0,0,.025);
+    position: relative;
+    font-size: 17pt;
+    font-weight: 900;
+    height: 50px;
+    margin-top: 2px;
+    margin-left: 9px;
+    font-family: serif;
+    width: 155px;
+    padding-left: 16px;
+}
+.more:hover {
+    background-color: #93281F;
+}
+.burger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 9px 2px;
+}
+.burger_item {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    position: relative;
+}
+.burger_item:before,
+.burger_item:after {
+    content: "";
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    background-color: white;
+}
+.burger_item:before {
+    width: 25px;
+    top: -8px;
+}
+.burger_item:after {
+    width: 28px;
+    bottom: -8px;
+}
