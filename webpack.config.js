@@ -80,6 +80,16 @@ module.exports = {
       template: "./src/views/index.ejs",
     }),
 
+    customHtmlWebpackPlugin({
+      filename: "books.html",
+      template: "./src/views/books.ejs",
+    }),
+
+    customHtmlWebpackPlugin({
+      filename: "guides.html",
+      template: "./src/views/guides.ejs",
+    }),
+
     new MiniCssExtractPlugin({
       filename: isDevelopment ? "[name].[ext]" : "[name].[contenthash].css"
     })
